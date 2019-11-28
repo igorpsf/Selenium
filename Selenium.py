@@ -74,34 +74,32 @@ class MyTestCase(unittest.TestCase):
         self.assertGreater()
         self.assertLess()
 
-        #xpath
-        # - absolute starts from the body html - starts with /
-        # - relative starts from any point of html tree - starts with //
+        # xpath
+        # absolute xpath starts from the body html - starts with /
+        # html/body/div[5]/div[2]/div/div[2]/div[2]/h2[1]
+
+        # relative xpath starts from any point of html tree - starts with //
+        # // *[ @ id = 'answers']
+
+        # Search in console - $x("//a[@class='a-link-normal fsdLink fsdDeptLink'][contains(text(), 'Children')]")
 
         "//a[@class='nav-a' and text()=\"Today's Deals\"]"
-        #$x("//a[@class='a-link-normal fsdLink fsdDeptLink'][contains(text(), 'Children')]")
         "//*[contains(@class, 'small') and text()='#{x}']"
-
         '//p[starts-with(@me,"you")]'
-
-        #"//span[@title='All Listings' and text()='All Listings']"
-        #$x("//*[contains(@class,'small') and text()='All Listings']"
-        #//div[@class='september']/div[@class='irritating']/ul/li
-
+        "//span[@title='All Listings' and text()='All Listings']"
+        "//*[contains(@class,'small') and text()='All Listings']"
+        "//div[@class='september']/div[@class='irritating']/ul/li"
         "//div[@class='a-fixed-left-grid-inner']//span[@class='a-icon-alt'][contains(text(), '4.9') or contains(text(), '4.8') or contains(text(), '4.7')]"
-        #"//div[@class='a-fixed-left-grid-inner']//span[@class='a-icon-alt'][contains(text(), '4.')]"
-        # element = $d.find_elementS :xpath => "...Hello, ..."
-        # if element.count > 0
-        # element[0].click
+        "//div[@class='a-fixed-left-grid-inner']//span[@class='a-icon-alt'][contains(text(), '4.')]"
 
 
         # close and quit
-        #close - closes the current window, for example pop up window
-        #quit - quits the browser session
+        # close - closes the current window, for example pop up window
+        # quit - quits the browser session
 
-        #switch
-        #switch_to - swith from current document to another window or frame
-        #switch_to_alert -
+        # switch
+        # switch_to - swith from current document to another window or frame
+        # switch_to_alert -
 
 
 if __name__ == '__main__':
